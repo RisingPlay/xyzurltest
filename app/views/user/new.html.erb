@@ -1,0 +1,22 @@
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link')%>
+
+<div class="users new">
+	<h2>Create User</h2>
+
+	<%= form_for(:user, :url => {:action => 'create'}) do |f| %>
+
+		<table summary="Subject form fields">
+			<tr>
+				<th>Url</th>
+				<td><%= f.text_field(:url) %></td>
+			</tr>
+			<tr>
+				<th>Key</th>
+				<td><%= f.text_field(:key, :placeholder => "optional") %></td>
+			</tr>
+		</table>
+		<div class="form-buttons">
+			<%= submit_tag("Create User") %>
+		</div>
+	<% end %>
+</div>

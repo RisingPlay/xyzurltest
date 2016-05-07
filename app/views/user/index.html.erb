@@ -1,0 +1,21 @@
+<div class="user index">
+	<h2>All Users</h2>
+
+	<%= link_to("Add New Subject", {:action => 'new'}, :class => 'action new')%>
+
+	<table>
+		<tr class="header">
+			<th></th>
+			<th></th>
+		</tr>
+		<% @users.each do |user| %>
+		<tr>
+			<td><%= user.url %></td>
+			<td><%= user.key %></td>
+			<td><%= link_to("Delete",{:action => 'delete',:user_id => user.id})%></td>
+		</tr>
+		<% end %>
+	</table>
+
+</div>
+
