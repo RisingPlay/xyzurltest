@@ -48,8 +48,14 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: ruby01
-  username: adminKeLSI6K
-  password: 5gjwxvWHlY8E
+
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
+  database: db/production.sqlite3
+  #<<: *default
+  #database: in_short_url_development
+  #database: ruby01
+  #username: adminKeLSI6K
+  #password: 5gjwxvWHlY8E
   #password: <%= ENV['IN_SHORT_URL_DATABASE_PASSWORD'] %>
