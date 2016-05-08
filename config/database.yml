@@ -50,6 +50,6 @@ test:
 production:
   <<: *default
   database: ruby
-  username: adminVTc31gp
-  password: 86eQXjCRwmc6
+  username: adminnSTupcu
+  password: cF8DrubzGVjI
   #password: <%= ENV['IN_SHORT_URL_DATABASE_PASSWORD'] %>
